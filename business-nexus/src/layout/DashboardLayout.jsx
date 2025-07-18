@@ -8,7 +8,9 @@ const DashboardLayout = ({ children }) => {
       <Navbar />
       <div className="flex flex-1">
         <Sidebar />
-        <main className="flex-1 p-6 bg-gray-50">{children}</main>
+        <main className="flex-1 p-6 bg-gray-50 dark:bg-gray-900 transition-all duration-300">
+          {children}
+        </main>
       </div>
     </div>
   );
