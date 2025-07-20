@@ -7,7 +7,8 @@ import InvestorDashboard from "./pages/dashboard/InvestorDashboard.jsx";
 import EntrepreneurDashboard from "./pages/dashboard/EntrepreneurDashboard.jsx";
 import InvestorProfile from "./pages/profile/InvestorProfile.jsx";
 import EntrepreneurProfile from "./pages/profile/EntrepreneurProfile.jsx";
-import Chat from "./pages/chat/Chat.jsx";
+// import Chat from "./pages/chat/Chat.jsx";
+import Chat from "./pages/auth/chat/Chat.jsx";
 import DashboardLayout from "./layout/DashboardLayout.jsx";
 import { useAuth } from "./context/AuthContext.jsx";
 
