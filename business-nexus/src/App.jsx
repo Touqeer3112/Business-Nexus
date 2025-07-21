@@ -7,8 +7,7 @@ import InvestorDashboard from "./pages/dashboard/InvestorDashboard.jsx";
 import EntrepreneurDashboard from "./pages/dashboard/EntrepreneurDashboard.jsx";
 import InvestorProfile from "./pages/profile/InvestorProfile.jsx";
 import EntrepreneurProfile from "./pages/profile/EntrepreneurProfile.jsx";
-// import Chat from "./pages/chat/Chat.jsx";
-import Chat from "./pages/auth/chat/Chat.jsx";
+import ChatPage from "./pages/auth/Chat.jsx"; 
 import DashboardLayout from "./layout/DashboardLayout.jsx";
 import { useAuth } from "./context/AuthContext.jsx";
 
@@ -17,12 +16,12 @@ function App() {
 
   return (
     <Routes>
-      {/*  Public Routes */}
+      {/* Public Routes */}
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
 
-      {/*  Protected Routes */}
+      {/* Protected Routes */}
       {currentUser && (
         <>
           {currentUser.role === "investor" && (
@@ -68,14 +67,14 @@ function App() {
             path="/chat/:userId"
             element={
               <DashboardLayout>
-                <Chat />
+                <ChatPage /> {/* Updated to use ChatPage */}
               </DashboardLayout>
             }
           />
         </>
       )}
 
-      {/*  Fallback route: redirect unknown routes */}
+      {/* Fallback route */}
       <Route path="*" element={<Navigate to={currentUser ? "/" : "/login"} />} />
     </Routes>
   );
